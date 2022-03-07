@@ -15,6 +15,6 @@
 
 ### Link on collabarative workspaces
 
-[Figma Team (view only)](https://www.figma.com/team_invite/redeem/GtCCZ2bZjbwDZZ7eTHMczi)
-[Figma first draft of prototype (view only)](https://www.figma.com/file/b2ULbwVnARMDPpdfYp9NVc/first-draft?node-id=0%3A1)
+- [Figma Team (view only)](https://www.figma.com/team_invite/redeem/GtCCZ2bZjbwDZZ7eTHMczi)
+- [Figma first draft of prototype (view only)](https://www.figma.com/file/b2ULbwVnARMDPpdfYp9NVc/first-draft?node-id=0%3A1)
 
