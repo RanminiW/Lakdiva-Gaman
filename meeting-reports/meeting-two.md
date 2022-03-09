@@ -4,29 +4,27 @@
 3. Share inspirations of possible logo designs
 
 ### Task List
-- [ ] Finalize the logo design
-- [ ] Finalize the name of the website
-- [ ] Finalize the color palette
+- [X] Finalize the logo design
+- [X] Finalize the name of the website
+- [X] Finalize the color palette
 - [ ] Make the basic structure of the webpage (just the meta tags)
 - [ ] Start on designing the actual UI of the website in respect to each students specific domain
 
 # Meeting Specs
 Date & Time	
-: xx/xx/xxxx
+: 08/03/2022 7pm-8pm(IST)
 ### Attendees
-- member 1
-- member 2
-- member 3
-- member 4
+- Rimaz
+- Dilitha
+- Ranmini
+- Zainab
 ### Objective
-- Objective 1
-- Objective 2
-- Objective 3
-- Objective 4
+- Website name : Ladivaගමන්
+- Logo : (On progress)
+- [Color palatte](https://coolors.co/12263a-ffb703-56876d) 
+- [Template design](https://www.youtube.com/watch?v=KRKMlwywJB4&feature=youtu.be)
 ### Contribution
-- member 1
-: preceeded the meeting
-- member 2
-- member 3
-- member 4
-
+- Decided on the website name
+- Brainstormed on the color palatte
+- Discussed aspects of the logo
+- Decided on the template design
