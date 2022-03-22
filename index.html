@@ -2,194 +2,645 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lakvidaගමන්</title>
+    <title>Ladivaගමන්</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    <!-- sinhala font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Stick+No+Bills:wght@200&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- custom js file link  -->
+    <script src="js/script.js" defer></script>
 
 </head>
 <body>
     
 <!-- header section starts  -->
 
-<header>
-    <h1>Lakvidaගමන්</h1>
-    <nav class="navbar">
-        <a href="index.html">home</a>
-        <a href="pages/package.html"> Available Packages</a>
-        <a href="#book">Book Now</a>
-        <a href="#review">Reviews</a>
-        <a href="#contact">Contact Us</a>
-        <a href="pages/quiz.html">Test your Knowledge</a>
-        <a href="pages/about.html">About Us</a>
-    </nav>
+<header class="header">
 
+    <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <i class="fas fa-paper-plane"></i>Lakvida<span id="sinhala-font">ගමන්</span></a>
+
+    <nav class="navbar">
+        <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">home</a>
+        <a data-aos="zoom-in-left" data-aos-delay="450" href="#packages">packages</a>
+        <a data-aos="zoom-in-left" data-aos-delay="600" href="#services">services</a>
+        <a data-aos="zoom-in-left" data-aos-delay="750" href="#quiz">quiz</a>
+        <a data-aos="zoom-in-left" data-aos-delay="900" href="#review">review</a>
+        <a data-aos="zoom-in-left" data-aos-delay="1050" href="#team">team</a>
+        <a data-aos="zoom-in-left" data-aos-delay="1200" href="#contact">contact</a>
+    </nav>
+    
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
 
     <form action="" class="search-bar-container">
         <input type="search" id="search-bar" placeholder="search here...">
-        <label for="search-bar"></label>
+        <label for="search-bar" class="fas fa-search"></label>
     </form>
+
 
 </header>
 
 <!-- header section ends -->
 
+<!-- login form container  -->
 
-<!-- book section starts  -->
+<div class="login-form-container">
 
-<section class="book" id="book">
+    <i class="fas fa-times" id="form-close"></i>
 
-    <h1 class="heading">Book Now</h1>
+    <form action="" class="form">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="enter your email">
+        <input type="password" class="box" placeholder="enter your password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember"><span id="remember-text">remember me</span></label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="#">register now</a></p>
+    </form>
 
-    <div class="row">
+</div>
+<!-- login form container ends  -->
+<!-- home section starts  -->
 
-        <form action="">
-            <div>
-                <h3>where to</h3>
-                <input type="text" placeholder="place name">
-            </div>
-            <div>
-                <h3>how many</h3>
-                <input type="number" placeholder="number of guests">
-            </div>
-            <div>
-                <h3>arrivals</h3>
-                <input type="date">
-            </div>
-            <div>
-                <h3>leaving</h3>
-                <input type="date">
-            </div>
-            <input type="submit" value="book now">
-        </form>
+<section class="home" id="home">
 
+    <div class="content">
+        <span data-aos="fade-up" data-aos-delay="150">become the adventure</span>
+        <h3 data-aos="fade-up" data-aos-delay="300">ladiva<span id="sinhala-font">ගමන්</span></h3>
+        <p data-aos="fade-up" data-aos-delay="450">Experience the best of Sri Lanka in it's culture, heritage and modernity, filled with adventure, excitement and thrill, only a click away from your dream vacation</p>
+        <a data-aos="fade-up" data-aos-delay="600" href="#" class="btn">book now</a>
     </div>
 
 </section>
 
-<!-- book section ends -->
+<!-- home section ends -->
+
+<!-- booking form section starts  -->
+
+<section class="book-form" id="book-form">
+
+    <form action="">
+        <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
+            <span>where to?</span>
+            <input type="text" placeholder="place name" value="">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="300" class="inputBox">
+            <span>when?</span>
+            <input type="date" value="">
+        </div>
+        <div data-aos="zoom-in" data-aos-delay="450" class="inputBox">
+            <span>how many?</span>
+            <input type="number" placeholder="number of travelers" value="">
+        </div>
+        <input data-aos="zoom-in" data-aos-delay="600" type="submit" value="find now" class="btn">
+    </form>
+
+</section>
+
+<!-- booking form section ends -->
 
 <!-- packages section starts  -->
 
-<section id="packages">
+<section class="packages" id="packages">
 
-    <h1 class="heading">Packages</h1>
+    <div class="heading">
+        <span>our packages</span>
+        <h1>select your package</h1>
+    </div>
+    <div class="box-container">
 
-    <div>
-
-        <div>
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <img src="images/home/p-1.jpg" alt="">
+                <h3> <i class="fas fa-map-marker-alt"></i> Ella </h3>
+            </div>
             <div class="content">
-                <h3>City Experience </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <p>Rs 9000</p> 
-                <a href="#">book now</a>
+                <div class="price"> 290.99 <span>350.99</span> </div>
+                <!-- content resource https://www.saltinourhair.com/sri-lanka/ella-sri-lanka/ -->
+                <p>Ella has all the best parts of Sri Lanka rolled into one: beautiful jungle mountains, rolling tea plantations, and epic waterfalls.</p>
+                <a href="#" class="btn"> book now</a>
             </div>
         </div>
-        <div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <div class="image">
+                <img src="images/home/p-2.jpg" alt="">
+                <h3> <i class="fas fa-map-marker-alt"></i> Kandy </h3>
+            </div>
             <div class="content">
-                <h3>Historic Mix</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <p>Rs 9000</p> 
-                <a href="#">book now</a>
+                <div class="price"> 290.99 <span>350.99</span> </div>
+                <!-- content resource https://www.thrillophilia.com/cities/kandy -->
+                <p>Dense forests, religious sites and mountains, the trekking trails of Kandy offer three delights to a tourist. </p>
+                <a href="#" class="btn"> book now</a>
             </div>
         </div>
-        <div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <div class="image">
+                <img src="images/home/p-3.jpg" alt="">
+                <h3> <i class="fas fa-map-marker-alt"></i> Sigiriya </h3>
+            </div>
             <div class="content">
-                <h3>Nature Bliss</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, nam!</p>
-                <p>Rs 9000</p> 
-                <a href="#">book now</a>
+                <div class="price"> 290.99 <span>350.99</span> </div>
+                 <!-- content resource https://www.holidify.com/places/sigiriya -->
+                <p>Sigiriya is a significant site of the Cultural Triangle and perhaps Sri Lanka's most iconic historical destination.</p>
+                <a href="#" class="btn"> book now</a>
             </div>
         </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <div class="image">
+                <img src="images/home/p-4.jpg" alt="">
+                <h3> <i class="fas fa-map-marker-alt"></i> Trincomalee </h3>
+            </div>
+            <div class="content">
+                <div class="price"> 290.99 <span>350.99</span> </div>
+                 <!-- content resource https://en.wikipedia.org/wiki/Trincomalee -->
+                <p>Trincomalee city is home to the famous Koneswaram temple from where it developed and earned its historic Tamil name Thirukonamalai.</p>
+                <a href="#" class="btn"> book now</a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="750">
+            <div class="image">
+                <img src="images/home/p-5.jpg" alt="">
+                <h3> <i class="fas fa-map-marker-alt"></i> Galle </h3>
+            </div>
+            <div class="content">
+                <div class="price"> 290.99 <span>350.99</span> </div>
+                 <!-- content resource https://www.holidify.com/places/galle -->
+                <p>Galle has a major attraction for wildlife enthusiasts—the Kanneliya Rainforest Reserve that harbours numerous endemic flora and fauna</p>
+                <a href="#" class="btn"> book now</a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="900">
+            <div class="image">
+                <img src="images/home/p-6.jpg" alt="">
+                <h3> <i class="fas fa-map-marker-alt"></i> Colombo </h3>
+            </div>
+            <div class="content">
+                <div class="price"> 290.99 <span>350.99</span> </div>
+                 <!-- content resource https://www.andbeyond.com/advice/asia/sri-lanka/colombo/why-visit-colombo/ -->
+                <p>Enjoy a Colombo walking tour of the city's historic Fort and Pettah districts.</p>
+                <a href="#" class="btn"> book now</a>
+            </div>
+        </div>
+
     </div>
 
 </section>
 
 <!-- packages section ends -->
 
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <div class="heading">
+        <span>our services</span>
+        <h1>countless experiences</h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+            <i class="fas fa-globe"></i>
+            <h3>islandwide</h3>
+            <p>we cater our services around the island giving chance to visit many places</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+            <i class="fas fa-hiking"></i>
+            <h3>adventures</h3>
+            <p>adventure is part of our language, with every step there is thrill</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+            <i class="fas fa-utensils"></i>
+            <h3>food & drinks</h3>
+            <p>Don't worry about packing in snacks or having to wish for goodies on your way to adventures, we've got you covered</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p>While in budget we provide you the best hotels in town</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
+            <i class="fas fa-wallet"></i>
+            <h3>affordable price</h3>
+            <p>Not only are we known for our quality service, but we also allow range of affordable services within your budget.</p>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
+            <i class="fas fa-headset"></i>
+            <h3>24/7 support</h3>
+            <p>Our lines are open all day all week pleased to serve all your enquires.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- quiz section starts  -->
+
+<section class="quiz" id="quiz">
+
+    <div class="heading">
+        <span>take a quiz</span>
+        <h1>test your familiarity</h1>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <div class="image">
+                <img src="images/home/q-1.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>Kandy</h3>
+                <p>How well do you know about the oldest historical capital?</p>
+                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <div class="image">
+                <img src="images/home/q-2.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Trincomalee</h3>
+                <p>Let's see how well you know about Trincomalee.</p>
+                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <div class="image">
+                <img src="images/home/q-3.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Ella</h3>
+                <p>There is more to Ella than the adventures.</p>
+                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <div class="image">
+                <img src="images/home/q-4.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Sigiriya</h3>
+                <p>Uncover the secrets beneath the rock.</p>
+                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="750">
+            <div class="image">
+                <img src="images/home/q-5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Colombo</h3>
+                <p>There's more to the glamorous city apart from it's hustle and bustle.</p>
+                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="900">
+            <div class="image">
+                <img src="images/home/q-6.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Galle</h3>
+                <p>The forts not only hide the city, there are more secrets to it.</p>
+                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- quiz section ends -->
 
 <!-- review section starts  -->
 
 <section class="review" id="review">
 
-    <h1 class="heading">Review</h1>
-    <div>
-        <h3>john deo</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
+    <div class="heading" data-aos="zoom-in-up" data-aos-delay="150">
+        <span>customer review</span>
+        <h1>Let's hear from our travelers themselves</h1>
     </div>
-    <div>
-        <h3>john deo</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
-    </div>
-    <div>
-        <h3>john deo</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa adipisci quisquam sunt nesciunt fugiat odit minus illum asperiores dolorum enim sint quod ipsam distinctio molestias consectetur ducimus beatae, reprehenderit exercitationem!</p>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+            <!-- image resource https://icons8.com/icon/set/profile/office -->
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/home/pic1.png" alt="">
+                    <h3>jane deo</h3>
+                    <p>LakdivaGaman a highly professional organization. The archaeologists they use as guides are erudite but highly personable and have an ability to turn a pile of stones into a recreation of the lives of the people who lived there over two millennia ago. Excellent.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/home/pic2.png" alt="">
+                    <h3>Mike smith</h3>
+                    <p>The combination of the archaeology, the food and wine experiences, the swimming and the generally relaxed atmosphere made for a very enjoyable tour. There was a high attention to detail. Our main tour guide was very enthusiastic and highly qualified. Excellent.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/home/pic3.png" alt="">
+                    <h3>Emily laker</h3>
+                    <p>The combination of our beautiful gleaming gulet, a totally professional crew, a talented chef producing exquisite yet simple dishes, our lovely local guide and our scholar tour leader who led us into the magic of the ancient world with charm and humour was a rare privilege.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/home/pic4.png" alt="">
+                    <h3>Alec Cray</h3>
+                    <p>We went to deserted bays to swim every day, when there was wind the sails went up and we gently sailed along the beautiful coastline. All the sites were fascinating. What more can I say? I shall never forget it.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 
 </section>
 
 <!-- review section ends -->
 
+<!-- team section starts  -->
+
+<section class="team" id="team">
+
+    <div class="heading">
+        <span>team</span>
+        <h1>brains behind the site</h1>
+    </div>
+
+    <div class="box-container">
+        
+
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <img src="images/home/g-1.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <a href="pages/rimaz.html" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
+            <img src="images/home/g-2.jpg" alt="">
+            <div class="content">
+                <h3>Zainab Fahim</h3>
+                <p>Student Role Two</p>
+                <a href="pages/zainab.html" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <img src="images/home/g-3.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <a href="pages/dilitha.html" class="btn">see more</a>
+            </div>
+        </div>
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <img src="images/home/g-4.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <a href="pages/ranmini.html" class="btn">see more</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- team section ends -->
+
 <!-- contact section starts  -->
 
 <section class="contact" id="contact">
-    
-    <h1 class="heading">Contact</h1>
+    <!-- image resource https://www.pexels.com/search/sri%20lanka/ -->
+    <div class="video-container" data-aos="fade-right" data-aos-delay="300">
+        <video src="images/home/about-vid-1.mp4" muted autoplay loop class="video"></video>
+        <div class="controls">
+            <span class="control-btn" data-src="images/home/about-vid-1.mp4"></span>
+            <span class="control-btn" data-src="images/home/about-vid-2.mp4"></span>
+            <span class="control-btn" data-src="images/home/about-vid-3.mp4"></span>
+        </div>
+    </div>
 
-        <form action="">
-            <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
-            </div>
-            <div class="inputBox">
-                <input type="number" placeholder="number">
-                <input type="text" placeholder="subject">
-            </div>
-            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
-            <input type="submit" class="btn" value="send message">
-        </form>
-    
+    <div class="content" data-aos="fade-left" data-aos-delay="600">
+        <span>want to know more?</span>
+        <h3>Send in your Query</h3>
+        <div class="alert">
+            <span class="cancelbtn" onclick="this.parentElement.style.display='none';"></span> 
+            <strong>Danger!</strong> Please enter your <span class="missingData"></span><i class="fas fa-times" id="form-close"></i>
+        </div>
+        <div class="row">
+            <form action="">
+                <div class="inputBox">
+                    <input type="text" placeholder="name" class="textBox" id="qName">
+                    <input type="email" placeholder="email" class="textBox" id="qEmail">
+                </div>
+                <div class="inputBox" id="selectInputBox">
+                    <div class="options-container">
+                        <div class="option">
+                        <input type="radio" class="radio" id="reservation" name="category" onclick="catOption()"/>
+                        <label for="reservation">Reservations</label>
+                        </div>
+            
+                        <div class="option">
+                        <input type="radio" class="radio" id="pricing" name="category" onclick="catOption()"/>
+                        <label for="pricing">Pricing</label>
+                        </div>
+            
+                        <div class="option">
+                        <input type="radio" class="radio" id="administration" name="category" onclick="catOption()"/>
+                        <label for="administration">Administration</label>
+                        </div>
+            
+                        <div class="option">
+                        <input type="radio" class="radio" id="other" name="category" onclick="catOption()"/>
+                        <label for="other" id="lable">Other</label>
+                        </div>
+                    </div>
+                    <div class="selected">
+                        Select Subject Category
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <textarea class="textAreaFocus" placeholder="details" name="" id="qDetail" cols="30" rows="10"></textarea>
+                </div>
+                <a onclick="getDetails()"><input type="button" class="btn" value="view query" id="view-query"></a>
+            </form>
+
+        </div>
+    </div>
+
 </section>
+<div class="view-query-form-container">
+
+    <form action="" class="form">
+        <div class="content">
+            <h3>Query Details</h3>
+            <label for="displayName">Name</label>
+            <div id="displayName"></div>
+            <label for="displayEmail">Email</label>
+            <div id="displayEmail"></div>
+            <label for="displaySubject">Subject</label>
+            <div id="displaySubject"></div>
+            <label for="displayDetail">Details</label>
+            <div id="displayDetail"></div>
+            <input type="button" value="Send" class="btn" id="send-query" onclick="mailContent()">
+            <input type="button" value="Edit" class="btn" id="edit-query">
+        </div>
+    </form>
+
+</div>
 
 <!-- contact section ends -->
 
 
-<!-- footer section  -->
+<!-- banner section starts  -->
+
+<div class="banner">
+
+    <div class="content" data-aos="zoom-in-up" data-aos-delay="300">
+        <span>start your adventures</span>
+        <h3>Let's Explore This Island</h3>
+        <p>Experience the best of Sri Lanka in it's culture, heritage and modernity, filled with adventure, excitement and thrill, only a click away from your dream vacation.</p>
+        <a href="#book-form" class="btn">book now</a>
+    </div>
+
+</div>
+
+<!-- banner section ends -->
+
+<!-- footer section starts  -->
 
 <section class="footer">
 
     <div class="box-container">
 
-        <div class="box">
-            <h3>about us</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quas magni pariatur est accusantium voluptas enim nemo facilis sit debitis.</p>
+        <div class="box" data-aos="fade-up" data-aos-delay="150">
+            <a href="#" class="logo"> <i class="fas fa-paper-plane"></i>Lakvida<span id="sinhala-font">ගමන්</span> </a>
+            <p>Only a click away from your dream vacation. Bringing to you a whole package of thrill, excitement and adventure</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
         </div>
-        <div class="box">
+
+        <div class="box" data-aos="fade-up" data-aos-delay="300">
             <h3>quick links</h3>
-            <a href="#">home</a>
-            <a href="#">book</a>
-            <a href="#">packages</a>
-            <a href="#">quiz</a>
-            <a href="#">review</a>
-            <a href="#">contact</a>
+            <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> home </a>
+            <a href="#packages" class="links"> <i class="fas fa-arrow-right"></i> packages </a>
+            <a href="#services" class="links"> <i class="fas fa-arrow-right"></i> services </a>
+            <a href="#quiz" class="links"> <i class="fas fa-arrow-right"></i> quiz </a>
+            <a href="#review" class="links"> <i class="fas fa-arrow-right"></i> review </a>
+            <a href="#team" class="links"> <i class="fas fa-arrow-right"></i> team </a>
+            <a href="#contact" class="links"> <i class="fas fa-arrow-right"></i> contact </a>
         </div>
-        <div class="box">
-            <h3>follow us</h3>
-            <a href="#">facebook</a>
-            <a href="#">instagram</a>
-            <a href="#">twitter</a>
-            <a href="#">linkedin</a>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="450">
+            <h3>contact info</h3>
+            <p> <i class="fas fa-map"></i> colombo, Sri Lanka </p>
+            <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
+            <p class="site-email"> <i class="fas fa-envelope"></i> lakdivagaman@gmail.com </p>
+            <p> <i class="fas fa-clock"></i> 7:00am - 10:00pm </p>
+        </div>
+
+        <div class="box" data-aos="fade-up" data-aos-delay="600">
+            <h3>newsletter</h3>
+            <p>subscribe for latest updates</p>
+            <form action="">
+                <input type="email" name="" placeholder="enter your email" class="email" id="">
+                <input type="submit" value="subscribe" class="btn">
+            </form>
         </div>
 
     </div>
 
 </section>
 
+<div class="credit">created by <a href="pages/zainab.html">Zainab Fahim</a> | all rights reserved!</div>
+
+<!-- footer section ends -->
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 
-<!-- custom js file link  -->
-<script src="javascript/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+
+    AOS.init({
+        duration: 800,
+        offset:150,
+    });
+
+</script>
 
 </body>
 </html>
