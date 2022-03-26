@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <title>Image Gallery</title>
+	  <link href="../css/gallery.css" rel="stylesheet">
+	</head>
+	<body style="width:100% ;height:100%">
+      <header>
+            
+            Image gallery
+         </header>
+         <div class="drpdwn">
+            <button onclick="Func()" class="drpbtn">Change Background Color</button>
+            <div id="myDrpdwn" class="drpdwn-cont">
+               <input type="color" id="clr">
+               <input type="button" value="change" onclick="prcs()"/ >
+            </div>
+         </div>
+         <div class="drpdwn">
+            <button onclick="chngefont()" class="drpbtn">Change Font Color</button>
+            <div id="fntdwn" class="drpdwn-cont">
+               <input type="color" id="clr1">
+               <input type="button" value="change" onclick="fntprc()"/ >
+            </div>
+         </div>
+      </div>
+      <table> 
+         <tr>
+            <td colspan="2">
+			<h3 style="color:#fff; font-size:30px;">Select your favourite destination:</h3>
+               <div id="my_Div" onclick="changeImage(event)">
+					
+                <img class="imgstyle" src="../images/gallery/kandy1.jpg" onClick="tst01()" >
+				<img class="imgstyle" src="../images/gallery/sigiriya1.jpg" onClick="tst02()" >
+                <img class="imgstyle" src="../images/gallery/trinco1.jpg" onClick="tst03()"/>
+                <img class="imgstyle" src="../images/gallery/ella.jpg" onClick="tst04()" />
+                <img class="imgstyle" src="../images/gallery/galle1.jpg" onClick="tst05()" />
+                  
+               </div>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>
+			   <img class="large-image" height="450px" width="auto" style="border:3px solid #ffb703" src="../images/gallery/kandy1.jpg" id="mainimg"/><br>
+            </td>
+			<td>
+               <div class="paragraph" >
+				<h3 id="title">Kandy</h3>
+                  <p  id="desc">Snuggled between the imposing mountains and verdant peaks are some of the best places to visit in Kandy that are defined by calmness and serenity. Known for spirituality and laid-back charm, Kandy has everything peaceful and balmy about it. The beautiful Sri Lankan city is also a popular attraction for Buddhists.
+                  
+				  </p>
+				  
+               </div>
+            </td>
+            
+		</tr>
+		
+      </table>
+
+	 <script type="text/javascript" src="../js/gallery.js"></script> 
+   </body>
+   
+   
+</html>

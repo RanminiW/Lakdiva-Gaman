@@ -1,9 +1,4 @@
 let navbar = document.querySelector('.header .navbar');
-let searchBtn = document.querySelector('#search-btn');
-let searchBar = document.querySelector('.search-bar-container');
-let formBtn = document.querySelector('#login-btn');
-let loginForm = document.querySelector('.login-form-container');
-let formClose = document.querySelector('#form-close');
 let viewQueryBtn = document.querySelector('#view-query');
 let viewQueryForm = document.querySelector('.view-query-form-container');
 let viewQueryClose = document.querySelector('#send-query');
@@ -12,11 +7,9 @@ const selected = document.querySelector("#contact .content .row form .inputBox .
 const optionsContainer = document.querySelector("#contact .content .row form .inputBox .options-container");
 
 
+
 window.onscroll = () =>{
     navbar.classList.remove('active');
-    searchBtn.classList.remove('fa-times');
-    searchBar.classList.remove('active');
-    loginForm.classList.remove('active');
     viewQueryForm.classList.remove('active');
 }
 
@@ -52,44 +45,71 @@ function mailContent(){
     var mailto_link = 'mailto:' +getEmail+'?subject=' + encodeURIComponent(getSubject) + '&body=' + encodeURIComponent(getDetail);
     win = window.open(mailto_link, 'emailWin');
     console.log("This works");
+    document.getElementById("qEmail").value='';
+    document.getElementById("qDetail").value='';
+    document.getElementById("qName").value='';
+    
+}
+
+function getName(){
+  var getName = document.getElementById("qName").value;
+  if(getName==""){
+    missing= "Please enter your name";
+    customAlert(missing);
+  }else if(getName){
+    document.getElementById("displayName").innerHTML = getName;
+  }
+}
+
+function getEmail(){
+  var getEmail = document.getElementById("qEmail").value;
+  if(getEmail==""){
+    missing= "Please enter your email address";
+    customAlert(missing);
+  }else if(getEmail){
+    document.getElementById("displayEmail").innerHTML = getEmail.toLowerCase();;
+  }
+}
+function getSubject(){
+  var getSubject = catOption();
+  if(getSubject==undefined){
+    missing= "Please choose the subject of your query";
+    customAlert(missing);
+  }else if(getSubject){
+    document.getElementById("displaySubject").innerHTML = getSubject;
+  }
+}
+
+function getDetail(){
+  var getDetail = document.getElementById("qDetail").value;
+  if(getDetail==""){
+    missing= "Please enter the details of your query";
+    customAlert(missing);
+  }else if(getDetail){
+    document.getElementById("displayDetail").innerHTML = getDetail;
+  }
+}
+
+
+function customAlert(missing){
+  const div=document.createElement('div');
+  div.className='alert';
+  div.appendChild(document.createTextNode(missing));
+  const parent=document.querySelector('.contact .content .row form');
+  const before=document.querySelector('#beforeAlert');
+  parent.insertBefore(div,before);
+  setTimeout(()=>document.querySelector('.alert').remove(),3000);
+  viewQueryForm.classList.remove('active');
 }
 
 function getDetails() {
-    var getName = document.getElementById("qName").value;
-    var getEmail = document.getElementById("qEmail").value;
-    var getSubject = catOption();
-    var getDetail = document.getElementById("qDetail").value;
-    document.getElementById("displayName").innerHTML = getName;
-    document.getElementById("displayEmail").innerHTML = getEmail.toLowerCase();;
-    document.getElementById("displaySubject").innerHTML = getSubject;
-    document.getElementById("displayDetail").innerHTML = getDetail;
+  viewQueryForm.classList.add('active');
+  getName();
+  getEmail();
+  getSubject();
+  getDetail();
 }
 
-function name(){
-  var getName = document.getElementById("qName").value;
-  if(getName=""){
-    alert();
-  }
-}
-// search button
-searchBtn.addEventListener('click', () =>{
-    searchBtn.classList.toggle('fa-times');
-    searchBar.classList.toggle('active');
-});
-
-// login form button
-formBtn.addEventListener('click', () =>{
-    loginForm.classList.add('active');
-});
-
-formClose.addEventListener('click', () =>{
-    loginForm.classList.remove('active');
-});
-
-// view query button
-viewQueryBtn.addEventListener('click', () =>{
-    viewQueryForm.classList.add('active');
-});
 
 viewQueryClose.addEventListener('click', () =>{
     viewQueryForm.classList.remove('active');

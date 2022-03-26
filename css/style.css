@@ -1,3 +1,5 @@
+/* vendor prefix https://caniuse.com/ */
+/* css grid: https://developer.mozilla.org/en-US/docs/Web/CSS/grid */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 :root{
   --theme:#FFB703;
@@ -11,18 +13,12 @@
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   outline: none;
   border: none;
   text-decoration: none;
   text-transform: capitalize;
-  -webkit-transition: all .2s linear;
   transition: all .2s linear;
-}
-#sinhala-font{
-  font-family: 'Abhaya Libre', serif;
-  font-family: 'Stick No Bills', sans-serif;
 }
 html {
   font-size: 62.5%;
@@ -30,7 +26,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 9rem;
 }
-
+/* reference https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar */
 html::-webkit-scrollbar {
   width: 1rem;
 }
@@ -84,7 +80,8 @@ section {
   background: var(--theme);
   color: var(--bg-color-2);
 }
-
+/* reference: https://developer.mozilla.org/en-US/docs/Web/CSS/box-flex */
+/* reference: https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
 .header {
   position: fixed;
   top: 0;
@@ -92,15 +89,9 @@ section {
   right: 0;
   z-index: 1000;
   background: var(--bg-color-1);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 1.5rem 9%;
 }
 
@@ -118,16 +109,9 @@ section {
 .header .btn {
   margin-top: 0;
 }
-
-.logo {
-  font-size: 2.5rem;
-  color: var(--text-color-1);
-  font-weight: bolder;
-}
-
-.logo i {
-  color: var(--theme);
-  padding-right: .5rem;
+.lglogo{
+    width: 160px;
+    height: 60px;
 }
 
 .header .icons i{
@@ -141,41 +125,6 @@ section {
   color:var(--theme);
 }
 
-.header .search-bar-container{
-  position: absolute;
-  top:100%; left: 0; right:0;
-  padding:1.5rem 2rem;
-  background-color: var(--bg-color-2);
-  border-top: .1rem solid rgba(255,255,255,.2);
-  display: flex;
-  align-items: center;
-  z-index: 1001;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-}
-
-.header .search-bar-container.active{
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.header .search-bar-container #search-bar{
-  width:100%;
-  padding:1rem;
-  text-transform: none;
-  color:var(--bg-color-1);
-  font-size: 1.7rem;
-  border-radius: .5rem;
-}
-
-.header .search-bar-container label{
-  color:var(--text-color-1);
-  cursor: pointer;
-  font-size: 3rem;
-  margin-left: 1.5rem;
-}
-
-.header .search-bar-container label:hover{
-  color:var(--theme);
-}
 /* login form start */
 .login-form-container{
   position: fixed;
@@ -189,14 +138,19 @@ section {
   justify-content: center;
 }
 
-.login-form-container.active{
-  top:0;
-}
 
-.login-form-container #form-close:hover{
-  color: var(--theme);
+.login-form{
+  font-size: 3rem;
+  color:var(--text-color-1);
+  text-transform: uppercase;
+  text-align: center;
+  padding:1rem 0;
+  margin-top: 15rem;
+  margin-bottom: 8rem;
+  margin-left: 25%;
+  margin-right: 25%;
 }
-.login-form-container .form{
+.login-form .form{
   margin:2rem;
   padding:1.5rem 2rem;
   border-radius: .5rem;
@@ -205,7 +159,7 @@ section {
   width:50rem;
 }
 
-.login-form-container .form h3{
+.login-form.form h3{
   font-size: 3rem;
   color:var(--text-color-1);
   text-transform: uppercase;
@@ -213,7 +167,7 @@ section {
   padding:1rem 0;
 }
 
-.login-form-container .form .box{
+.login-form .form .box{
   width:100%;
   padding:1rem;
   font-size: 1.7rem;
@@ -225,50 +179,43 @@ section {
   text-transform: none;
 }
 
-.login-form-container .form .box:focus{
+.login-form .form .box:focus{
   border-color: var(--theme);
 }
 
-.login-form-container .form #remember{
+.login-form .form #remember{
   margin:2rem 0;
   
   
 }
-.login-form-container .form #remember-text{
+.login-form .form #remember-text{
   color:var(--text-color-1);
 }
 
-.login-form-container .form label{
+.login-form .form label{
   font-size: 1.5rem;
 }
 
-.login-form-container .form .btn{
+.login-form .form .btn{
   display: block;
   width:100%;
 }
 
-.login-form-container .form p{
+.login-form .form p{
   padding:.5rem 0;
   font-size: 1.5rem;
   color:var(--text-color-2);
 }
 
-.login-form-container .form p a{
+.login-form .form p a{
   color:var(--theme);
 }
 
-.login-form-container .form p a:hover{
+.login-form .form p a:hover{
   color:var(--text-color-1);
   text-decoration: underline;
 }
 
-.login-form-container #form-close{
-  position: absolute;
-  top:2rem; right:3rem;
-  font-size: 5rem;
-  color:var(--text-color-2);
-  cursor: pointer;
-}
 /* login form end */
 
 
@@ -277,21 +224,14 @@ section {
   margin-top: 9rem;
   width: 90%;
   border-radius: 1rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(../images/home/home-bg.jpg) no-repeat;
   background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(../images/home/home-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   min-height: 80vh;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding-bottom: 5rem;
 }
 
@@ -302,7 +242,7 @@ section {
 .home .content span {
   font-weight: bolder;
   color: transparent;
-  -webkit-text-stroke: 0.1rem var(--text-color-1);
+  -webkit-text-stroke: 0.1rem var(--theme);
   font-size: 4vw;
   display: block;
 }
@@ -327,27 +267,19 @@ section {
   margin-top: -5rem;
   background: var(--bg-color-1);
   border-radius: 1rem;
-  -webkit-box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
-          box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
+  box-shadow: 0 0.5rem 1rem rgba(17, 17, 17, 0.3);
   padding: 3rem 2rem;
 }
 
 .book-form form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: flex-end;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
 .book-form form .inputBox {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 25rem;
-          flex: 1 1 25rem;
+  flex: 1 1 25rem;
 }
 
 .book-form form .inputBox span {
@@ -368,11 +300,10 @@ section {
 }
 
 .book-form form .btn {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 15rem;
-          flex: 1 1 15rem;
+  flex: 1 1 15rem;
 }
 /* book form end */
+
 /* packages start */
 .packages{
   padding-top: 5rem;
@@ -391,8 +322,7 @@ section {
   overflow: hidden;
 }
 .packages .box-container .box:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .packages .box-container .box .image {
@@ -404,8 +334,7 @@ section {
 .packages .box-container .box .image img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .packages .box-container .box .image h3{
   position: absolute;
@@ -448,61 +377,44 @@ section {
 }
 /* packages end */
 
+/* gallery start */
 
-/* services start */
-.services{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-.services .box-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
-  gap: 1.5rem;
+.gallery .box-container {
+  columns: 3 25rem;
+  column-gap: 1.5rem;
 }
 
-.services .box-container .box {
-  background: var(--bg-color-1);
+.gallery .box-container .box {
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+
+.gallery .box-container .box img {
+  width: 100%;
   border-radius: 1rem;
-  padding: 3rem;
-  text-align: center;
-  border: 0.2rem solid var(--bg-color-2);
+  margin-bottom: 1rem;
 }
 
-.services .box-container .box:hover {
-  border: 0.2rem solid var(--theme);
-}
-
-.services .box-container .box i {
-  font-size: 4rem;
-  color: var(--theme);
-  margin-bottom: 2rem;
-}
-
-.services .box-container .box h3 {
-  font-size: 2rem;
-  color: var(--text-color-1);
-}
-
-.services .box-container .box p {
-  padding: 1rem 0;
+.gallery .box-container .box span {
   font-size: 1.4rem;
-  color: var(--text-color-2);
-  line-height: 2;
+  color: #aaa;
 }
-/* services end */
 
+.gallery .box-container .box h3 {
+  margin-top: .5rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* gallery end */
 /* quiz start */
 .quiz{
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 .quiz .box-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(27rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
   gap: 1.5rem;
 }
 
@@ -513,8 +425,7 @@ section {
 }
 
 .quiz .box-container .box:hover img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .quiz .box-container .box .image {
@@ -526,7 +437,6 @@ section {
 .quiz .box-container .box .image img {
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
      object-fit: cover;
 }
 
@@ -612,12 +522,11 @@ section {
 .team .box-container{
   display: flex;
   flex-wrap: wrap;
-  gap:3rem;
+  gap:5rem;
 }
 
 .team .box-container .box{
   overflow: hidden;
-  /* box-shadow: 0 1rem 2rem rgba(0,0,0,.1); */
   border:1rem solid var(--bg-color-2);
   border-radius: .5rem;
   flex:1 1 35rem;
@@ -662,22 +571,15 @@ section {
 /* contact start */
 
 .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 5rem;
 }
 
 .contact .video-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 42rem;
-          flex: 1 1 42rem;
+  flex: 1 1 42rem;
 }
 
 .contact .video-container video {
@@ -705,9 +607,7 @@ section {
 }
 
 .contact .content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 42rem;
-          flex: 1 1 42rem;
+  flex: 1 1 42rem;
   margin-bottom: 5rem;
 }
 
@@ -723,6 +623,18 @@ section {
   margin-top: .5rem;
   padding-left:2rem;
 }
+.contact .row form .alert{
+  background-color: rgba(145, 18, 18, 0.322);
+  padding: 1rem;
+  margin:.6rem 0;
+  border:.2rem solid rgba(170, 7, 7, 0.863);
+  border-radius: .7rem;
+  text-transform: none;
+  color: var(--text-color-2);
+  font-size: 1.7rem;
+  
+}
+
 .contact .row{
   display: flex;
   flex-wrap: wrap;
@@ -799,7 +711,7 @@ section {
 
   transition: all 0.4s;
 }
-/* change start */
+
 
 .contact .row form .inputBox .options-container.active {
   max-height: 240px;
@@ -847,7 +759,7 @@ section {
   display: none;
 }
 
-/* change end */
+
 .contact .row form .inputBox input, .contact .row form textarea{
   width:49%;
   margin:1rem 0;
@@ -945,7 +857,6 @@ section {
 /* contact end */
 
 .banner {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(../images/home/banner-bg.jpg) no-repeat;
   background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(../images/home/banner-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
@@ -974,10 +885,8 @@ section {
 }
 
 .footer .box-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 1.5rem;
 }
 
@@ -1074,6 +983,7 @@ section {
 .credit a {
   color: var(--theme);
 }
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -1094,12 +1004,10 @@ section {
     left: 0;
     right: 0;
     background: var(--bg-color-1);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   .header .navbar.active {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   .header .navbar a {
     margin: 2rem;
@@ -1128,4 +1036,3 @@ section {
     font-size: 2.7rem;
   }
 }
-/*# sourceMappingURL=style.css.map */

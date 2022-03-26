@@ -1,24 +1,33 @@
+<!--  design inspiration -->
+<!-- https://preview.colorlib.com/#vacation -->
+<!-- https://preview.colorlib.com/#travelo -->
+<!-- https://www.youtube.com/watch?v=KRKMlwywJB4&feature=youtu.be -->
+<!-- https://www.nycgo.com/ -->
+<!-- https://colorlib.com/wp/template/tour/ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ladivaගමන්</title>
-    
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    
-    <!-- sinhala font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Stick+No+Bills:wght@200&display=swap" rel="stylesheet">
-
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Lakdivaගමන්</title>
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- swiper bundle -->
+    <!-- reference page: https://swiperjs.com/get-started -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+     <!-- font awesome  -->
+    <!-- download page: https://cdnjs.com/libraries/font-awesome -->
+    <!-- reference: https://fontawesome.com/ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!-- Animate on scroll library -->
+    <!-- download page https://cdnjs.com/libraries/aos -->
+    <!-- reference: https://michalsnik.github.io/aos/?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
     <!-- custom js file link  -->
@@ -31,61 +40,38 @@
 
 <header class="header">
 
-    <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> <i class="fas fa-paper-plane"></i>Lakvida<span id="sinhala-font">ගමන්</span></a>
+    <a data-aos="zoom-in-left" data-aos-delay="150" href="#" class="logo"> 
+        <img src="images/lakdivaGamanLogo.png" alt="logo image" class="lglogo">
+    </a>
 
     <nav class="navbar">
         <a data-aos="zoom-in-left" data-aos-delay="300" href="#home">home</a>
-        <a data-aos="zoom-in-left" data-aos-delay="450" href="#packages">packages</a>
-        <a data-aos="zoom-in-left" data-aos-delay="600" href="#services">services</a>
-        <a data-aos="zoom-in-left" data-aos-delay="750" href="#quiz">quiz</a>
+        <a data-aos="zoom-in-left" data-aos-delay="450" href="pages/packages.html">packages</a>
+        <a data-aos="zoom-in-left" data-aos-delay="600" href="pages/gallery.html">gallery</a>
+        <a data-aos="zoom-in-left" data-aos-delay="750" href="pages/quiz.html">quiz</a>
         <a data-aos="zoom-in-left" data-aos-delay="900" href="#review">review</a>
         <a data-aos="zoom-in-left" data-aos-delay="1050" href="#team">team</a>
         <a data-aos="zoom-in-left" data-aos-delay="1200" href="#contact">contact</a>
     </nav>
     
     <div class="icons">
-        <i class="fas fa-search" id="search-btn"></i>
-        <i class="fas fa-user" id="login-btn"></i>
+        <a href="pages/login.html" target="_blank"><i class="fas fa-user" id="login-btn"></i></a>
     </div>
-
-    <form action="" class="search-bar-container">
-        <input type="search" id="search-bar" placeholder="search here...">
-        <label for="search-bar" class="fas fa-search"></label>
-    </form>
 
 
 </header>
 
 <!-- header section ends -->
 
-<!-- login form container  -->
-
-<div class="login-form-container">
-
-    <i class="fas fa-times" id="form-close"></i>
-
-    <form action="" class="form">
-        <h3>login</h3>
-        <input type="email" class="box" placeholder="enter your email">
-        <input type="password" class="box" placeholder="enter your password">
-        <input type="submit" value="login now" class="btn">
-        <input type="checkbox" id="remember">
-        <label for="remember"><span id="remember-text">remember me</span></label>
-        <p>forget password? <a href="#">click here</a></p>
-        <p>don't have and account? <a href="#">register now</a></p>
-    </form>
-
-</div>
-<!-- login form container ends  -->
 <!-- home section starts  -->
 
 <section class="home" id="home">
 
     <div class="content">
         <span data-aos="fade-up" data-aos-delay="150">become the adventure</span>
-        <h3 data-aos="fade-up" data-aos-delay="300">ladiva<span id="sinhala-font">ගමන්</span></h3>
+        <h3 data-aos="fade-up" data-aos-delay="300">lakdivaගමන්</h3>
         <p data-aos="fade-up" data-aos-delay="450">Experience the best of Sri Lanka in it's culture, heritage and modernity, filled with adventure, excitement and thrill, only a click away from your dream vacation</p>
-        <a data-aos="fade-up" data-aos-delay="600" href="#" class="btn">book now</a>
+        <a data-aos="fade-up" data-aos-delay="600" href="pages/packages.html" class="btn">book now</a>
     </div>
 
 </section>
@@ -96,7 +82,7 @@
 
 <section class="book-form" id="book-form">
 
-    <form action="">
+    <form>
         <div data-aos="zoom-in" data-aos-delay="150" class="inputBox">
             <span>where to?</span>
             <input type="text" placeholder="place name" value="">
@@ -109,7 +95,7 @@
             <span>how many?</span>
             <input type="number" placeholder="number of travelers" value="">
         </div>
-        <input data-aos="zoom-in" data-aos-delay="600" type="submit" value="find now" class="btn">
+        <input data-aos="zoom-in" data-aos-delay="600" type="submit" value="find now" class="btn" onclick="pages/packages.html">
     </form>
 
 </section>
@@ -128,79 +114,79 @@
 
         <div class="box" data-aos="fade-up" data-aos-delay="150">
             <div class="image">
-                <img src="images/home/p-1.jpg" alt="">
+                <img src="images/home/p-1.jpg" alt="package image one">
                 <h3> <i class="fas fa-map-marker-alt"></i> Ella </h3>
             </div>
             <div class="content">
                 <div class="price"> 290.99 <span>350.99</span> </div>
                 <!-- content resource https://www.saltinourhair.com/sri-lanka/ella-sri-lanka/ -->
                 <p>Ella has all the best parts of Sri Lanka rolled into one: beautiful jungle mountains, rolling tea plantations, and epic waterfalls.</p>
-                <a href="#" class="btn"> book now</a>
+                <a href="pages/packages.html" class="btn"> book now</a>
             </div>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="300">
             <div class="image">
-                <img src="images/home/p-2.jpg" alt="">
+                <img src="images/home/p-2.jpg" alt="package image two">
                 <h3> <i class="fas fa-map-marker-alt"></i> Kandy </h3>
             </div>
             <div class="content">
                 <div class="price"> 290.99 <span>350.99</span> </div>
                 <!-- content resource https://www.thrillophilia.com/cities/kandy -->
                 <p>Dense forests, religious sites and mountains, the trekking trails of Kandy offer three delights to a tourist. </p>
-                <a href="#" class="btn"> book now</a>
+                <a href="pages/packages.html" class="btn"> book now</a>
             </div>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="450">
             <div class="image">
-                <img src="images/home/p-3.jpg" alt="">
+                <img src="images/home/p-3.jpg" alt="package image three">
                 <h3> <i class="fas fa-map-marker-alt"></i> Sigiriya </h3>
             </div>
             <div class="content">
                 <div class="price"> 290.99 <span>350.99</span> </div>
                  <!-- content resource https://www.holidify.com/places/sigiriya -->
                 <p>Sigiriya is a significant site of the Cultural Triangle and perhaps Sri Lanka's most iconic historical destination.</p>
-                <a href="#" class="btn"> book now</a>
+                <a href="pages/packages.html" class="btn"> book now</a>
             </div>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="600">
             <div class="image">
-                <img src="images/home/p-4.jpg" alt="">
+                <img src="images/home/p-4.jpg" alt="package image 4">
                 <h3> <i class="fas fa-map-marker-alt"></i> Trincomalee </h3>
             </div>
             <div class="content">
                 <div class="price"> 290.99 <span>350.99</span> </div>
                  <!-- content resource https://en.wikipedia.org/wiki/Trincomalee -->
                 <p>Trincomalee city is home to the famous Koneswaram temple from where it developed and earned its historic Tamil name Thirukonamalai.</p>
-                <a href="#" class="btn"> book now</a>
+                <a href="pages/packages.html" class="btn"> book now</a>
             </div>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="750">
             <div class="image">
-                <img src="images/home/p-5.jpg" alt="">
+                <img src="images/home/p-5.jpg" alt="package image five">
                 <h3> <i class="fas fa-map-marker-alt"></i> Galle </h3>
             </div>
             <div class="content">
                 <div class="price"> 290.99 <span>350.99</span> </div>
                  <!-- content resource https://www.holidify.com/places/galle -->
                 <p>Galle has a major attraction for wildlife enthusiasts—the Kanneliya Rainforest Reserve that harbours numerous endemic flora and fauna</p>
-                <a href="#" class="btn"> book now</a>
+                <a href="pages/packages.html" class="btn"> book now</a>
             </div>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="900">
             <div class="image">
-                <img src="images/home/p-6.jpg" alt="">
+                <img src="images/home/p-6.jpg" alt="package image six">
                 <h3> <i class="fas fa-map-marker-alt"></i> Colombo </h3>
             </div>
             <div class="content">
                 <div class="price"> 290.99 <span>350.99</span> </div>
                  <!-- content resource https://www.andbeyond.com/advice/asia/sri-lanka/colombo/why-visit-colombo/ -->
                 <p>Enjoy a Colombo walking tour of the city's historic Fort and Pettah districts.</p>
-                <a href="#" class="btn"> book now</a>
+                <a href="pages/packages.html" class="btn"> book now</a>
             </div>
         </div>
 
@@ -210,58 +196,69 @@
 
 <!-- packages section ends -->
 
-<!-- services section starts  -->
+<!-- gallery section starts  -->
 
-<section class="services" id="services">
+<section class="gallery" id="gallery">
 
     <div class="heading">
-        <span>our services</span>
-        <h1>countless experiences</h1>
+        <span>our gallery</span>
+        <h1>we record memories</h1>
     </div>
-
+    
     <div class="box-container">
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
-            <i class="fas fa-globe"></i>
-            <h3>islandwide</h3>
-            <p>we cater our services around the island giving chance to visit many places</p>
+            <img src="images/home/gallery-img-1.jpg" alt="gallery image one">
+            <span>travel spot</span>
+            <h3>ella</h3>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
-            <i class="fas fa-hiking"></i>
-            <h3>adventures</h3>
-            <p>adventure is part of our language, with every step there is thrill</p>
+            <img src="images/home/gallery-img-2.jpg" alt="gallery image two">
+            <span>travel spot</span>
+            <h3>ella</h3>
         </div>
 
         <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
-            <i class="fas fa-utensils"></i>
-            <h3>food & drinks</h3>
-            <p>Don't worry about packing in snacks or having to wish for goodies on your way to adventures, we've got you covered</p>
+            <img src="images/home/gallery-img-3.jpg" alt="gallery image three">
+            <span>travel spot</span>
+            <h3>galle</h3>
         </div>
 
-        <div class="box" data-aos="zoom-in-up" data-aos-delay="600">
-            <i class="fas fa-hotel"></i>
-            <h3>affordable hotels</h3>
-            <p>While in budget we provide you the best hotels in town</p>
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+            <img src="images/home/gallery-img-4.jpg" alt="gallery image four">
+            <span>travel spot</span>
+            <h3>kandy</h3>
         </div>
 
-        <div class="box" data-aos="zoom-in-up" data-aos-delay="750">
-            <i class="fas fa-wallet"></i>
-            <h3>affordable price</h3>
-            <p>Not only are we known for our quality service, but we also allow range of affordable services within your budget.</p>
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+            <img src="images/home/gallery-img-5.jpg" alt="gallery image five">
+            <span>travel spot</span>
+            <h3>kandy</h3>
         </div>
 
-        <div class="box" data-aos="zoom-in-up" data-aos-delay="900">
-            <i class="fas fa-headset"></i>
-            <h3>24/7 support</h3>
-            <p>Our lines are open all day all week pleased to serve all your enquires.</p>
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="450">
+            <img src="images/home/gallery-img-6.jpg" alt="gallery image six">
+            <span>travel spot</span>
+            <h3>sigiriya</h3>
         </div>
 
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="150">
+            <img src="images/home/gallery-img-7.jpg" alt="gallery image seven">
+            <span>travel spot</span>
+            <h3>trincomalee</h3>
+        </div>
+
+        <div class="box" data-aos="zoom-in-up" data-aos-delay="300">
+            <img src="images/home/gallery-img-8.jpg" alt="gallery image eight">
+            <span>travel spot</span>
+            <h3>galle</h3>
+        </div>
     </div>
-
+    <a data-aos="zoom-in-left" data-aos-delay="150" href="pages/gallery.html" class="btn">see more</a>
 </section>
 
-<!-- services section ends -->
+<!-- gallery section ends -->
 
 <!-- quiz section starts  -->
 
@@ -276,68 +273,68 @@
 
         <div class="box" data-aos="fade-up" data-aos-delay="150">
             <div class="image">
-                <img src="images/home/q-1.jpg" alt="">
+                <img src="images/home/q-1.jpg" alt="quiz image one">
             </div>
 
             <div class="content">
                 <h3>Kandy</h3>
                 <p>How well do you know about the oldest historical capital?</p>
-                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+                <a href="pages/quiz.html">take quiz <i class="fas fa-angle-right"></i></a>
             </div>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="300">
             <div class="image">
-                <img src="images/home/q-2.jpg" alt="">
+                <img src="images/home/q-2.jpg" alt="quiz image two">
             </div>
             <div class="content">
                 <h3>Trincomalee</h3>
                 <p>Let's see how well you know about Trincomalee.</p>
-                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+                <a href="pages/quiz.html">take quiz <i class="fas fa-angle-right"></i></a>
             </div>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="450">
             <div class="image">
-                <img src="images/home/q-3.jpg" alt="">
+                <img src="images/home/q-3.jpg" alt="quiz image three">
             </div>
             <div class="content">
                 <h3>Ella</h3>
                 <p>There is more to Ella than the adventures.</p>
-                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+                <a href="pages/quiz.html">take quiz <i class="fas fa-angle-right"></i></a>
             </div>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="600">
             <div class="image">
-                <img src="images/home/q-4.jpg" alt="">
+                <img src="images/home/q-4.jpg" alt="quiz image four">
             </div>
             <div class="content">
                 <h3>Sigiriya</h3>
                 <p>Uncover the secrets beneath the rock.</p>
-                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+                <a href="pages/quiz.html">take quiz <i class="fas fa-angle-right"></i></a>
             </div>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="750">
             <div class="image">
-                <img src="images/home/q-5.jpg" alt="">
+                <img src="images/home/q-5.jpg" alt="quiz image five">
             </div>
             <div class="content">
                 <h3>Colombo</h3>
                 <p>There's more to the glamorous city apart from it's hustle and bustle.</p>
-                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+                <a href="pages/quiz.html">take quiz <i class="fas fa-angle-right"></i></a>
             </div>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="900">
             <div class="image">
-                <img src="images/home/q-6.jpg" alt="">
+                <img src="images/home/q-6.jpg" alt="quiz image six">
             </div>
             <div class="content">
                 <h3>Galle</h3>
                 <p>The forts not only hide the city, there are more secrets to it.</p>
-                <a href="#">take quiz <i class="fas fa-angle-right"></i></a>
+                <a href="pages/quiz.html">take quiz <i class="fas fa-angle-right"></i></a>
             </div>
         </div>
 
@@ -362,7 +359,7 @@
             <!-- image resource https://icons8.com/icon/set/profile/office -->
             <div class="swiper-slide">
                 <div class="box">
-                    <img src="images/home/pic1.png" alt="">
+                    <img src="images/home/pic1.png" alt="review image one">
                     <h3>jane deo</h3>
                     <p>LakdivaGaman a highly professional organization. The archaeologists they use as guides are erudite but highly personable and have an ability to turn a pile of stones into a recreation of the lives of the people who lived there over two millennia ago. Excellent.</p>
                     <div class="stars">
@@ -376,7 +373,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="box">
-                    <img src="images/home/pic2.png" alt="">
+                    <img src="images/home/pic2.png" alt="review image two">
                     <h3>Mike smith</h3>
                     <p>The combination of the archaeology, the food and wine experiences, the swimming and the generally relaxed atmosphere made for a very enjoyable tour. There was a high attention to detail. Our main tour guide was very enthusiastic and highly qualified. Excellent.</p>
                     <div class="stars">
@@ -390,7 +387,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="box">
-                    <img src="images/home/pic3.png" alt="">
+                    <img src="images/home/pic3.png" alt="review image three">
                     <h3>Emily laker</h3>
                     <p>The combination of our beautiful gleaming gulet, a totally professional crew, a talented chef producing exquisite yet simple dishes, our lovely local guide and our scholar tour leader who led us into the magic of the ancient world with charm and humour was a rare privilege.</p>
                     <div class="stars">
@@ -404,7 +401,7 @@
             </div>
             <div class="swiper-slide">
                 <div class="box">
-                    <img src="images/home/pic4.png" alt="">
+                    <img src="images/home/pic4.png" alt="review image four">
                     <h3>Alec Cray</h3>
                     <p>We went to deserted bays to swim every day, when there was wind the sails went up and we gently sailed along the beautiful coastline. All the sites were fascinating. What more can I say? I shall never forget it.</p>
                     <div class="stars">
@@ -438,15 +435,15 @@
         
 
         <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <img src="images/home/g-1.jpg" alt="">
+            <img src="images/home/t-1.jpg" alt="team image one">
             <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <h3>Rimaz Rizwan</h3>
+                <p>Student Role One</p>
                 <a href="pages/rimaz.html" class="btn">see more</a>
             </div>
         </div>
         <div class="box" data-aos="fade-up" data-aos-delay="300">
-            <img src="images/home/g-2.jpg" alt="">
+            <img src="images/home/t-2.jpg" alt="team image two">
             <div class="content">
                 <h3>Zainab Fahim</h3>
                 <p>Student Role Two</p>
@@ -454,18 +451,18 @@
             </div>
         </div>
         <div class="box" data-aos="fade-up" data-aos-delay="450">
-            <img src="images/home/g-3.jpg" alt="">
+            <img src="images/home/t-3.jpg" alt="team image three">
             <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <h3>Dilitha Kolonne</h3>
+                <p>Student Role Three</p>
                 <a href="pages/dilitha.html" class="btn">see more</a>
             </div>
         </div>
         <div class="box" data-aos="fade-up" data-aos-delay="600">
-            <img src="images/home/g-4.jpg" alt="">
+            <img src="images/home/t-4.jpeg" alt="team image four">
             <div class="content">
-                <h3>amazing places</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <h3>Ranmini Welagedara</h3>
+                <p>Student Role Four</p>
                 <a href="pages/ranmini.html" class="btn">see more</a>
             </div>
         </div>
@@ -491,46 +488,43 @@
     <div class="content" data-aos="fade-left" data-aos-delay="600">
         <span>want to know more?</span>
         <h3>Send in your Query</h3>
-        <div class="alert">
-            <span class="cancelbtn" onclick="this.parentElement.style.display='none';"></span> 
-            <strong>Danger!</strong> Please enter your <span class="missingData"></span><i class="fas fa-times" id="form-close"></i>
-        </div>
         <div class="row">
-            <form action="">
-                <div class="inputBox">
+            <form>
+                
+                <div class="inputBox" id="beforeAlert">
                     <input type="text" placeholder="name" class="textBox" id="qName">
                     <input type="email" placeholder="email" class="textBox" id="qEmail">
                 </div>
                 <div class="inputBox" id="selectInputBox">
-                    <div class="options-container">
-                        <div class="option">
+                    <div class="options-container" id="first-parent">
+                        <div class="option" id="option1">
                         <input type="radio" class="radio" id="reservation" name="category" onclick="catOption()"/>
                         <label for="reservation">Reservations</label>
                         </div>
             
-                        <div class="option">
+                        <div class="option" id="option2">
                         <input type="radio" class="radio" id="pricing" name="category" onclick="catOption()"/>
                         <label for="pricing">Pricing</label>
                         </div>
             
-                        <div class="option">
+                        <div class="option" id="option3">
                         <input type="radio" class="radio" id="administration" name="category" onclick="catOption()"/>
                         <label for="administration">Administration</label>
                         </div>
-            
-                        <div class="option">
+
+                        <div class="option" id="option4">
                         <input type="radio" class="radio" id="other" name="category" onclick="catOption()"/>
-                        <label for="other" id="lable">Other</label>
+                        <label for="other">Other</label>
                         </div>
                     </div>
-                    <div class="selected">
+                    <div class="selected" style="color: var(--text-color-2);">
                         Select Subject Category
                     </div>
                 </div>
                 <div class="inputBox">
-                    <textarea class="textAreaFocus" placeholder="details" name="" id="qDetail" cols="30" rows="10"></textarea>
+                    <textarea class="textAreaFocus" placeholder="details" id="qDetail" cols="30" rows="10"></textarea>
                 </div>
-                <a onclick="getDetails()"><input type="button" class="btn" value="view query" id="view-query"></a>
+                <input type="button" class="btn" value="view query" id="view-query" onclick="getDetails()">
             </form>
 
         </div>
@@ -539,19 +533,20 @@
 </section>
 <div class="view-query-form-container">
 
-    <form action="" class="form">
+    <form class="form" data-aos="zoom-in-up" id="query-form">
         <div class="content">
             <h3>Query Details</h3>
-            <label for="displayName">Name</label>
+            <label>Name</label>
             <div id="displayName"></div>
-            <label for="displayEmail">Email</label>
+            <label>Email</label>
             <div id="displayEmail"></div>
-            <label for="displaySubject">Subject</label>
+            <label>Subject</label>
             <div id="displaySubject"></div>
-            <label for="displayDetail">Details</label>
+            <label>Details</label>
             <div id="displayDetail"></div>
-            <input type="button" value="Send" class="btn" id="send-query" onclick="mailContent()">
             <input type="button" value="Edit" class="btn" id="edit-query">
+            <input type="button" value="Send" class="btn" id="send-query" onclick="mailContent()">
+            
         </div>
     </form>
 
@@ -568,7 +563,7 @@
         <span>start your adventures</span>
         <h3>Let's Explore This Island</h3>
         <p>Experience the best of Sri Lanka in it's culture, heritage and modernity, filled with adventure, excitement and thrill, only a click away from your dream vacation.</p>
-        <a href="#book-form" class="btn">book now</a>
+        <a href="pages/packages.html" class="btn">book now</a>
     </div>
 
 </div>
@@ -582,7 +577,7 @@
     <div class="box-container">
 
         <div class="box" data-aos="fade-up" data-aos-delay="150">
-            <a href="#" class="logo"> <i class="fas fa-paper-plane"></i>Lakvida<span id="sinhala-font">ගමන්</span> </a>
+            <a href="#" class="logo"><img src="images/LakdivaGamanLogo.png" alt="logo image" class="lglogo"></a>
             <p>Only a click away from your dream vacation. Bringing to you a whole package of thrill, excitement and adventure</p>
             <div class="share">
                 <a href="#" class="fab fa-facebook-f"></a>
@@ -595,12 +590,13 @@
         <div class="box" data-aos="fade-up" data-aos-delay="300">
             <h3>quick links</h3>
             <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> home </a>
-            <a href="#packages" class="links"> <i class="fas fa-arrow-right"></i> packages </a>
-            <a href="#services" class="links"> <i class="fas fa-arrow-right"></i> services </a>
-            <a href="#quiz" class="links"> <i class="fas fa-arrow-right"></i> quiz </a>
+            <a href="pages/packages.html" class="links"> <i class="fas fa-arrow-right"></i> packages </a>
+            <a href="pages/gallery.html" class="links"> <i class="fas fa-arrow-right"></i> gallery </a>
+            <a href="pages/quiz.html" class="links"> <i class="fas fa-arrow-right"></i> quiz </a>
             <a href="#review" class="links"> <i class="fas fa-arrow-right"></i> review </a>
             <a href="#team" class="links"> <i class="fas fa-arrow-right"></i> team </a>
             <a href="#contact" class="links"> <i class="fas fa-arrow-right"></i> contact </a>
+            <a href="pages/site-map.html" class="links"> <i class="fas fa-arrow-right"></i> site-map </a>
         </div>
 
         <div class="box" data-aos="fade-up" data-aos-delay="450">
@@ -614,8 +610,8 @@
         <div class="box" data-aos="fade-up" data-aos-delay="600">
             <h3>newsletter</h3>
             <p>subscribe for latest updates</p>
-            <form action="">
-                <input type="email" name="" placeholder="enter your email" class="email" id="">
+            <form>
+                <input type="email" placeholder="enter your email" class="email">
                 <input type="submit" value="subscribe" class="btn">
             </form>
         </div>
@@ -624,7 +620,7 @@
 
 </section>
 
-<div class="credit">created by <a href="pages/zainab.html">Zainab Fahim</a> | all rights reserved!</div>
+<div class="credit">Page Developer: <a href="pages/zainab.html">Zainab Fahim</a></div>
 
 <!-- footer section ends -->
 
